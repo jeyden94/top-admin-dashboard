@@ -4,8 +4,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    /* grid-template-rows: 200px 400px 400px; */
+    grid-template-columns: clamp(250px, 20%, 300px) 3fr 1fr;
     grid-template-rows: 1fr 2fr 1fr;
     gap: 15px;
     height: 100vh;
@@ -16,11 +15,83 @@ body {
     border: 1px solid green;
 }
 
+/* Sidebar */
+
+.sidebar > * ~ * {
+    margin-top: 50px;
+    display: grid;
+    gap: 15px; 
+}
+
 .sidebar {
     grid-row: 1 / span 3;
     color: white;
     background-color: #1992d4;
     padding: 20px;
+}
+
+.sidebar svg {
+    fill: white;
+    height: 30px;
+    width: auto;
+    place-self: center;
+}
+
+.sidebar .logo-wrapper{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 10px;
+}
+
+.sidebar .logo-icon {
+    place-self: center;
+    display: grid;
+}
+
+.sidebar .logo-text {
+    align-self: center;
+    font-size: 1.4rem;
+}
+
+.sidebar .logo-svg {
+    resize: purple;
+    height: 50px;
+    width: auto;
+}
+
+.sidebar .sidebar-primary .page-link-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 15px;
+}
+
+.sidebar .sidebar-primary .page-link-icon {
+    place-self: center;
+    display: grid;
+}
+
+.sidebar .sidebar-primary .page-link {
+    align-self: center;
+    font-size: 1.4rem;
+}
+
+.sidebar .sidebar-secondary .page-link-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 15px;
+}
+
+.sidebar .sidebar-secondary .page-link-icon {
+    place-self: center;
+    display: grid;
+}
+
+.sidebar .sidebar-secondary .page-link {
+    align-self: center;
+    font-size: 1.4rem;
 }
 
 .view-dashboard {
