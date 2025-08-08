@@ -6,13 +6,161 @@ body {
     display: grid;
     grid-template-columns: clamp(250px, 20%, 300px) 3fr 1fr;
     grid-template-rows: 1fr 2fr 1fr;
-    gap: 15px;
     height: 100vh;
 }
+
+/* Navbar */
 
 .nav {
     grid-column: 2 / span 2;
     border: 1px solid green;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 4fr 5fr;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.nav .search,
+.nav .welcome {
+    padding-left: 50px;
+}
+
+/* Navbar -- Search Quadrant */
+
+.nav .search {
+    display: grid;
+}
+
+.nav .search-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 30px;
+    align-self: center;
+}
+
+.nav .search .search-wrapper .search-icon {
+    display: grid;
+}
+
+.nav .search .search-wrapper .search-icon svg {
+    height: 30px;
+    place-self: center;
+}
+
+.nav .search .search-wrapper .search-bar {
+    background-color: rgb(222, 222, 222);
+    border-radius: 100px;
+    width: clamp(60px, 100%, 800px)
+}
+
+/* Navbar -- Profile Quadrant */
+
+.nav .profile {
+    display: grid;
+}
+
+.nav .profile-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 80px;
+    align-self: center;
+    gap: 50px;
+}
+
+.nav .notification-icon {
+    display: grid;
+}
+
+.nav .profile-icon-small {
+    display: grid;
+    align-self: center;
+    height: 100%;
+}
+
+.nav .profile img {
+    height: 60px;
+    border-radius: 100px;
+    border: 3px solid black;
+    place-self: center;
+}
+
+.nav .profile-name {
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-right: 20px;
+}
+
+.nav .profile svg {
+    height: 30px;
+    align-self: center;
+    justify-self: right;
+}
+
+/* Navbar -- Welcome Quadrant */
+
+.nav .welcome {
+    display: grid;
+}
+
+.nav .welcome-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 120px 1fr;
+    gap: 30px;
+    align-self: center;
+    padding-left: 20px;
+}
+
+.nav .welcome img {
+    height: 100px;
+    width: auto;
+    border-radius: 100px;
+    border: 3px solid black;
+}
+
+.nav .welcome-greeting-wrapper {
+    display: grid;
+}
+
+.nav .welcome-greeting-text {
+    align-self: center;
+}
+
+.nav .welcome-greeting-text > * {
+    margin: 5px;
+}
+
+/* Navbar -- Create Quadrant */
+
+.nav .create {
+    display: grid;
+}
+
+.nav .create-wrapper {
+    align-self: center;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 15px;
+    padding-right: 20px;
+}
+
+.nav .create-wrapper > * {
+    place-self: center;
+}
+
+.nav button {
+    background-color: #1992d4;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 10px 0;
+    width: 100px;
+    border: none;
+    border-radius: 100px;
 }
 
 /* Sidebar */
@@ -94,23 +242,22 @@ body {
     font-size: 1.4rem;
 }
 
-.view-dashboard {
-    color: white;
-}
-
 .projects {
     grid-area: 2 / 2 / 4 / 3;
     border: 1px solid purple;
+    background-color: rgb(222, 222, 222);
 }
 
 .announcements {
     grid-column: 3;
     grid-row: 2;
     border: 1px solid orange;
+    background-color: rgb(222, 222, 222);
 }
 
 .trending {
     grid-column: 3;
     grid-row: 3;
     border: 1px solid red;
+    background-color: rgb(222, 222, 222);
 }
