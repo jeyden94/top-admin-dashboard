@@ -13,7 +13,6 @@ body {
 
 .nav {
     grid-column: 2 / span 2;
-    border: 1px solid green;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 4fr 5fr;
@@ -242,10 +241,44 @@ body {
     font-size: 1.4rem;
 }
 
+/* Projects */
+
 .projects {
     grid-area: 2 / 2 / 4 / 3;
     border: 1px solid purple;
-    background-color: rgb(222, 222, 222);
+    background-color: rgb(233, 233, 233);
+    display: grid;
+}
+
+.projects .projects-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.projects .projects-wrapper {
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    padding: 20px;
+}
+
+.projects .projects-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.projects .single-card-wrapper {
+    background-color: orange;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(50, 50, 50, .1);
+}
+
+.projects .card {
+    background-color: white;
+    margin-left: 8px;
+    height: 100%;
+    padding-left: 12px;
+    border-radius: 0 10px 10px 0;
 }
 
 .announcements {
