@@ -4,9 +4,10 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: clamp(250px, 20%, 300px) 3fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: clamp(250px, 20%, 300px) 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr .5fr;
     height: 100vh;
+    background-color: rgb(233, 233, 233);
 }
 
 /* Navbar */
@@ -171,7 +172,7 @@ body {
 }
 
 .sidebar {
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 4;
     color: white;
     background-color: #1992d4;
     padding: 20px;
@@ -202,7 +203,6 @@ body {
 }
 
 .sidebar .logo-svg {
-    resize: purple;
     height: 50px;
     width: auto;
 }
@@ -245,7 +245,6 @@ body {
 
 .projects {
     grid-area: 2 / 2 / 4 / 3;
-    border: 1px solid purple;
     background-color: rgb(233, 233, 233);
     display: grid;
 }
@@ -263,7 +262,7 @@ body {
 
 .projects .projects-card-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -278,15 +277,97 @@ body {
     margin-left: 8px;
     height: 100%;
     padding-left: 12px;
+    padding-right: 12px;
     border-radius: 0 10px 10px 0;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
 }
+
+.projects .card-title {
+    align-self: end;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.projects .card-body {
+    align-self: start;
+    color: rgb(113, 113, 113);
+}
+
+.projects .card-icons {
+    display: grid;
+    gap: 20px;
+    padding-right: 20px;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+}
+
+.projects .card-icons > * {
+    display: grid;
+}
+
+.projects svg {
+    fill: grey;
+    height: 24px;
+    justify-self: right;
+    align-self: center;
+}
+
+/* Announcements */
 
 .announcements {
     grid-column: 3;
     grid-row: 2;
-    border: 1px solid orange;
     background-color: rgb(222, 222, 222);
+    display: grid;
 }
+
+.announcements .announcements-wrapper {
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    padding: 20px;
+}
+
+.announcements .announcements-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.announcements .announcements-card {
+    background-color: white;
+    margin-left: 8px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(50, 50, 50, .1);
+    display: grid;
+    gap: 25px;
+}
+
+.announcements .announcements-card > * ~ * {
+    border-top: 1px solid grey;
+    padding-top: 25px;
+}
+
+
+.announcements .card-section {
+    display: grid;
+}
+
+.announcements .card-section-title {
+    font-size: 1rem;
+    font-weight: 800;
+    align-self: end;
+    margin-bottom: 4px;
+}
+
+.announcements .card-section-body {
+    font-size: .9rem;
+    color: rgb(113, 113, 113);
+    align-self: start;
+}
+
+
+/* Trending */
 
 .trending {
     grid-column: 3;
