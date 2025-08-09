@@ -4,7 +4,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: clamp(250px, 20%, 300px) 2fr 1fr;
+    grid-template-columns: clamp(250px, 20%, 300px) 3fr 1fr;
     grid-template-rows: 1fr 2fr 2fr .5fr;
     height: 100vh;
     background-color: rgb(233, 233, 233);
@@ -19,6 +19,8 @@ body {
     grid-template-rows: 4fr 5fr;
     padding-top: 10px;
     padding-bottom: 20px;
+    background-color: white;
+
 }
 
 .nav .search,
@@ -263,6 +265,7 @@ body {
 .projects .projects-card-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -318,7 +321,7 @@ body {
 .announcements {
     grid-column: 3;
     grid-row: 2;
-    background-color: rgb(222, 222, 222);
+    background-color: rgb(233, 233, 233);
     display: grid;
 }
 
@@ -335,7 +338,6 @@ body {
 
 .announcements .announcements-card {
     background-color: white;
-    margin-left: 8px;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(50, 50, 50, .1);
@@ -347,7 +349,6 @@ body {
     border-top: 1px solid grey;
     padding-top: 25px;
 }
-
 
 .announcements .card-section {
     display: grid;
@@ -372,6 +373,54 @@ body {
 .trending {
     grid-column: 3;
     grid-row: 3;
-    border: 1px solid red;
-    background-color: rgb(222, 222, 222);
+    background-color: rgb(233, 233, 233);
+}
+
+.trending .trending-wrapper {
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    padding: 20px;
+}
+
+.trending .trending-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.trending .trending-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(50, 50, 50, .1);
+    display: grid;
+    gap: 25px;
+}
+
+.trending .trending-section {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
+}
+
+.trending .trending-section-icon img {
+    height: 60px;
+    border-radius: 100px;
+    border: 3px solid black;
+    place-self: center;
+}
+
+.trending .user-info-wrapper {
+    align-self: center;
+    justify-self: start;
+    display: grid;
+    gap: 4px;
+}
+
+.trending .trending-section-handle {
+    font-weight: 500;
+    color: black;
+}
+
+.trending .trending-section-username {
+    color: rgb(113, 113, 113); 
 }
